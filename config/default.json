@@ -1,0 +1,7 @@
+{
+	"tasks": {
+		"host": "localhost",
+		"port": 3000,
+		"dbConnectionString": "mongodb://127.0.0.1/tasks"
+	}
+}

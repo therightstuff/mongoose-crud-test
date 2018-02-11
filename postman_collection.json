@@ -1,0 +1,318 @@
+{
+	"info": {
+		"name": "tasks",
+		"_postman_id": "844f69da-481c-dc82-6191-047f481a590c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jsmith\",\n\t\"first_name\" : \"John\",\n\t\"last_name\" : \"Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jsmith\",\n\t\"first_name\" : \"John\",\n\t\"last_name\" : \"Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "read user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jsmith\",\n\t\"first_name\" : \"John\",\n\t\"last_name\" : \"Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list user tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jsmith\",\n\t\"first_name\" : \"John\",\n\t\"last_name\" : \"Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718",
+						"tasks"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create user task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"task1\",\n\t\"description\": \"task 1\",\n\t\"date_time\": \"2016-05-25 14:25:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718",
+						"tasks"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update user task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"task1\",\n\t\"description\": \"task 1\",\n\t\"status\": \"pending\",\n\t\"date_time\": \"2016-05-25 14:25:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718/tasks/5a80822adcafbb429c8394bd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718",
+						"tasks",
+						"5a80822adcafbb429c8394bd"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "read user task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"task1\",\n\t\"description\": \"task 1\",\n\t\"status\": \"pending\",\n\t\"date_time\": \"2016-05-25 14:25:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718/tasks/5a80822adcafbb429c8394bd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718",
+						"tasks",
+						"5a80822adcafbb429c8394bd"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete user task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"task1\",\n\t\"description\": \"task 1\",\n\t\"status\": \"pending\",\n\t\"date_time\": \"2016-05-25 14:25:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a8049aa09f2541da8da0718/tasks/5a8080706e771733f45c79e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a8049aa09f2541da8da0718",
+						"tasks",
+						"5a8080706e771733f45c79e0"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jsmith\",\n\t\"first_name\" : \"John\",\n\t\"last_name\" : \"Smith\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/5a80517705a8692d808f47a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5a80517705a8692d808f47a2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
